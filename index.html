@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Engineer Homework</title>
+    <script type="module" src="src/script.js" defer></script>
+    <link rel="stylesheet" href="src/stylesheet.css" />
+</head>
+<body>
+
+    <h1>Report Generator</h1>
+
+    <div class="selection-box">
+        <select class="dropdown" id="dropdown">
+            <option value="placeholder" selected disabled hidden>Select a report option</option>
+            <option value="report1">Report 1</option>
+            <option value="report2">Report 2</option>
+            <option value="report3">Report 3</option>
+            <option value="report4">Report 4</option>
+        </select>
+    
+        <!-- Divs to display/hide -->
+        <div id="placeholder" class="hidden" style="display: block;">
+            <p>Start generating reports by selecting a report option above</p>
+        </div>
+        <div id="report1" class="hidden">
+            <h2>Report 1</h2>
+            <p>Takes the value of a <code>myShopifyDomain</code> field as an input and returns their <code>optimization</code> settings. (e.g <code>test-account-5.myshopify.com</code>)</p>
+            <input class="input-text" id="inputDomain" value=".myshopify.com"><button class="btn-rounded" id="btnDomainReport">Submit</button>
+        </div>
+        <div id="report2" class="hidden">
+            <h2>Report 2</h2>
+            <p>Loops through all organizations and shows the date they were created (DD/MM/YYYY), their <code>status</code>, and <code>planName</code> sorted by oldest to newest.</p>
+            <button class="btn-rounded" id="orgSort">Generate Report #2</button>
+        </div>
+        <div id="report3" class="hidden">
+            <h2>Report 3</h2>
+            <p>Returns the list of organizations whose status is cancelled.</p>
+            <button class="btn-rounded" id="cancelledPlans">Generate Report #3</button>
+        </div>
+        <div id="report4" class="hidden">
+            <h2>Report 4</h2>
+            <p>Takes the value of an <code>orgName</code> and returns the organization record in JSON format. (e.g <code>test account 3</code>)</p>
+            <input class="input-text" id="inputOrgName"><button class="btn-rounded" id="btnOrgName">Submit</button>
+        </div>
+    </div>
+    <span id="data"></span>
+</body>
+</body>
+</html>
